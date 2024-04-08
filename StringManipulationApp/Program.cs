@@ -8,10 +8,12 @@ namespace StringManipulationApp
         static void Main(string[] args)
         {
             Modulator modulator = new Modulator();
-            modulator.FirstStringModulator("madárnyelv");
+            string firstModulatorResult = modulator.FirstStringModulator("madárnyelv");
+            Console.WriteLine(firstModulatorResult);
             Console.WriteLine("Nyomj meg egy gombot a folytatáshoz!");
             Console.ReadKey();
-            modulator.Squeeze("megadott sztring", "gt");
+            string secondModulatorResult = modulator.Squeeze("megadott sztring", "gt");
+            Console.WriteLine(secondModulatorResult);
         }
     }
 }

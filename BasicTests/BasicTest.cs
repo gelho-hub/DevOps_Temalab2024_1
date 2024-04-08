@@ -1,21 +1,17 @@
-Ôªøusing System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using StringManipulationApp;
 
-namespace Tests
+
+namespace BasicTests
 {
-    public class BasicTests
+    public class BasicTest
     {
         [Fact]
         public void TestFirstStringModulator()
         {
             // Arrange
             Modulator modulator = new Modulator();
-            string inputText = "mad√°rnyelv";
-            string expected = "mavad√°v√°rnyevelv"; // Expected output after modulating
+            string inputText = "mad·rnyelv";
+            string expected = "mavad·v·rnyevelv"; // Expected output after modulating
 
             // Act
             string actual = modulator.FirstStringModulator(inputText);
