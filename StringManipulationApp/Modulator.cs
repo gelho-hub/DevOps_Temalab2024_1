@@ -9,7 +9,7 @@ namespace StringManipulationApp
     public class Modulator
     {
         public Modulator() { }
-        public void FirstStringModulator(string GotText) // minden magánhangzó után v + a magánhangzó
+        public string FirstStringModulator(string GotText) // minden magánhangzó után v + a magánhangzó
         {
             List<string> maganhangzok = new List<string>() { "a", "á", "e", "é", "i", "í", "o", "ó", "ö", "ő", "u", "ú", "ü", "ű"};
 
@@ -26,9 +26,9 @@ namespace StringManipulationApp
                     }
                 }
             }
-            Console.WriteLine(newString);
+            return newString;
         }
-        public void Squeeze(string text, string removableText)
+        public string Squeeze(string text, string removableText)
         {
             string newString = text;
             for (int i = 0; i < text.Length; i++)
@@ -42,7 +42,7 @@ namespace StringManipulationApp
                     
                 }
             }
-            Console.WriteLine(newString);
+            return newString;
             // Írj olyan "squeeze" programot, amely egy sztringből az összes olyan karaktert törli,
             // amelyik szerepel egy második sztringben! Például "megadott sztring", "gt" esetén: "meado szrin" az eredmény.
         }
