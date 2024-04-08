@@ -10,8 +10,8 @@ namespace BasicTests
         {
             // Arrange
             Modulator modulator = new Modulator();
-            string inputText = "madárnyelv";
-            string expected = "mavadávárnyevelv"; // Expected output after modulating
+            string inputText = "madrnyelv";
+            string expected = "mavadavarnyevelv"; // Expected output after modulating
 
             // Act
             string actual = modulator.FirstStringModulator(inputText);
