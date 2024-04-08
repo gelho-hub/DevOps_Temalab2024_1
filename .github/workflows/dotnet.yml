@@ -29,5 +29,5 @@ jobs:
       run: dotnet build --no-restore
       working-directory: ./StringManipulationApp
     - name: Test
-      working-directory: ./StringManipulationApp/Tests
+      working-directory: ./StringManipulationApp
       run: dotnet test --no-restore --no-build --verbosity normal
