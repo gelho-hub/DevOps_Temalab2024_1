@@ -31,3 +31,9 @@ jobs:
     - name: Test
       working-directory: ./BasicTests
       run: dotnet test --no-restore --no-build --verbosity normal
+    - name: Create an issue
+      if: failure()
+      uses: JasonEtco/create-an-issue@v2.9.2
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            
