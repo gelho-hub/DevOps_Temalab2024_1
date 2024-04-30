@@ -31,6 +31,10 @@ jobs:
     - name: Test
       working-directory: ./BasicTests
       run: dotnet test --no-restore --no-build --verbosity normal
+      
+    - name: Set issue body
+      run: echo "::set-env name=GITHUB_ISSUE_BODY::One or more test failed on main by ${{ github.actor }}'s commit.\n$(date +'%A, %B %d')"
+    
     - name: Create an Issue
       if: failure()
       uses: JasonEtco/create-an-issue@v2
