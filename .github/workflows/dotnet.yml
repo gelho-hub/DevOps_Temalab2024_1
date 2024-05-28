@@ -5,7 +5,7 @@ name: .NET_first_build_and_test
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "dev" ]
   pull_request:
     branches: [ "main" ]
 
@@ -43,4 +43,8 @@ jobs:
       with:
         filename: .github/ISSUE_TEMPLATE/custom.md
         assignees: gelho-hub
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v6.0.5
+            
+      
               
