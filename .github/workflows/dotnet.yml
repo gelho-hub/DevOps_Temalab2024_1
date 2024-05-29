@@ -41,6 +41,6 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        filename: .github/ULTIMATE_ISSUE_TEMPLATE.md
+        filename: .github/ISSUE_TEMPLATE/custom.md
         assignees: gelho-hub
               
