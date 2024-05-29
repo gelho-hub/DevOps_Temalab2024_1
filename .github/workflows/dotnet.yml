@@ -48,7 +48,7 @@ jobs:
       with:
         destination_branch: "main"
         reviewers: blazovics
-        github_token: ${{secrets.GITHUB_TOKEN}}
+        #github_token: ${{secrets.GITHUB_TOKEN}}
             
       
               
