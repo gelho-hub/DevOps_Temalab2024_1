@@ -14,7 +14,7 @@ jobs:
 
     runs-on: ubuntu-latest
     env:
-      working-direcory: ./StringManipulationApp
+      working-directory: ./StringManipulationApp
 
     steps:
     - uses: actions/checkout@v4
@@ -48,7 +48,7 @@ jobs:
       with:
         destination_branch: "main"
         reviewers: blazovics
-        #github_token: ${{secrets.GITHUB_TOKEN}}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
             
       
               
