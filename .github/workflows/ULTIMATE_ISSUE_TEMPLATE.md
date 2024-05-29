@@ -1,7 +1,10 @@
 ---
-title: Test failed
-assignees: gelho-hub
+name: Custom issue template
+about: Test fail
+title: Tests failed
 labels: bug
+assignees: gelho-hub
 ---
-One or more test failed on main by ${{ payload.sender.login }}'s  commit.
- ${{ date | date('dddd, MMMM Do') }}
+
+{{ payload.sender.login }}
+One or more tests failed. Please provide details about the failure here.
