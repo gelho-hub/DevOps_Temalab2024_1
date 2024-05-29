@@ -47,6 +47,7 @@ jobs:
       uses: repo-sync/pull-request@v2
       with:
         destination_branch: "main"
+        reviewers: blazovics
         github_token: ${{secrets.GITHUB_TOKEN}}
             
       
