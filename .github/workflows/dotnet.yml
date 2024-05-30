@@ -1,20 +1,20 @@
 # This workflow will build a .NET project
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
 
-name: .NET_first_build_and_test
+name: Dev .NET
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "dev" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "dev" ]
 
 jobs:
   build:
 
     runs-on: ubuntu-latest
     env:
-      working-direcory: ./StringManipulationApp
+      working-directory: ./StringManipulationApp
 
     steps:
     - uses: actions/checkout@v4
@@ -43,4 +43,12 @@ jobs:
       with:
         filename: .github/ISSUE_TEMPLATE/custom.md
         assignees: gelho-hub
+    - name: Create Pull Request
+      uses: repo-sync/pull-request@v2
+      with:
+        destination_branch: "main"
+        pr_reviewer: blazovics
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+            
+      
               
